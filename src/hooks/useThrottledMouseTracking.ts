@@ -20,8 +20,8 @@ export function useThrottledMouseTracking(isEnabled: boolean = true) {
 
       rafRef.current = requestAnimationFrame(() => {
         if (isCursorInsideHero) {
-          const x = (e.clientX / window.innerWidth - 0.9) * 0.9;
-          const y = (e.clientY / window.innerHeight - 0.5) * 0.7;
+          const x = (e.clientX / window.innerWidth - 0.5) * 1.5;
+          const y = (e.clientY / window.innerHeight - 0.7) * 0;
           setMousePosition({ x, y });
         }
       });
