@@ -418,7 +418,7 @@ gsap.to(backgroundTextRef.current, {
                 textShadow: '0 10px 20px rgba(0,0,0,0.3)'
               }}
             >
-              VISUAL STORYTELLER CRAFTING BRANDS
+            I Edit visuals that build brands
             </h1>
           </div>
         </div>
