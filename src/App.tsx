@@ -25,11 +25,11 @@ interface TestimonialBadge {
 const testimonialBadges: TestimonialBadge[] = [
   { image: "/badges/1.png", position: { top: "30%", left: "24%" }, delay: 1.5, shineDelay: 1.3, shineDuration: 14, scale: 1.0 },
   
-  { image: "/badges/4.png", position: { top: "60%", left: "70%" }, delay: 2.8, shineDelay: 0.2, shineDuration: 12, scale: 0.8 }, 
+  { image: "/badges/4.png", position: { top: "60%", left: "80%" }, delay: 2.8, shineDelay: 0.2, shineDuration: 12, scale: 0.8 }, 
   
   { image: "/badges/3.png", position: { top: "50%", left: "29%" }, delay: 1.1, shineDelay: 1.7, shineDuration: 15, scale: 0.9 },  
   
-  { image: "/badges/2.png", position: { top: "25%", left: "77%" }, delay: 3.4, shineDelay: 0.1, shineDuration: 13, scale: 2 },
+  { image: "/badges/2.png", position: { top: "25%", left: "77%" }, delay: 3.4, shineDelay: 0.1, shineDuration: 13, scale: 0.7 },
   
   { image: "/badges/5.png", position: { top: "25%", left: "10%" }, delay: 2.7, shineDelay: 1.9, shineDuration: 16, scale: 1.1 },
    
