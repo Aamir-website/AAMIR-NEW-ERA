@@ -451,7 +451,7 @@ gsap.to(backgroundTextRef.current, {
         {/* Bottom Triangle Shape */}
         <div 
   ref={triangleRef}
-  className={`absolute ${isMobile() ? 'bottom-32' : 'bottom-42'} 
+  className={`absolute ${isMobile() ? 'bottom-22' : 'bottom-42'} 
      left-1/2 max-sm:left-[41%]
      -translate-x-1/2   
      opacity-0 animate-fade-in-delayed  
