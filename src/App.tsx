@@ -33,7 +33,7 @@ const testimonialBadges: TestimonialBadge[] = [
   
   { image: "/badges/5.png", position: { top: "25%", left: "10%" }, delay: 2.7, shineDelay: 1.9, shineDuration: 16, scale: 1.1 },
    
-  { image: "/badges/6.png", position: { top: "42%", left: "80%" }, delay: 1.0, shineDelay: 0.8, shineDuration: 12, scale: 0.8 },
+  { image: "/badges/6.png", position: { top: "42%", left: "78%" }, delay: 1.0, shineDelay: 0.8, shineDuration: 12, scale: 0.8 },
   
   { image: "/badges/7.png", position: { top: "60%", left: "17%" }, delay: 3.3, shineDelay: 1.5, shineDuration: 14, scale: 0.9 },
   { image: "/badges/8.png", position: { top: "42%", left: "13%" }, delay: 2.6, shineDelay: 0.2, shineDuration: 13, scale: 0.6 }, 
