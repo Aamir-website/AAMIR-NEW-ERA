@@ -157,7 +157,7 @@ function App() {
         trigger: heroRef.current,
         start: "top top",
         end: "top+=800",
-        scrub: 1
+        scrub: 0.5
       }
     });
 
