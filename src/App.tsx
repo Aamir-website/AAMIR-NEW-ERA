@@ -461,17 +461,29 @@ gsap.to(backgroundTextRef.current, {
           </div>
         </div>
 
-        {/* Floating Testimonial Badges */}
-        {showTestimonials && (
-          <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden max-w-[130%] mx-9x1 transform -translate-y-20">
-            <div className="hidden md:block">
-              {testimonialBadges.map((badge, index) => (
-                <TestimonialBadge key={index} badge={badge} />
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+       {/* Floating Testimonial Badges */}
+{showTestimonials && (
+  <div
+    className="
+      fixed 
+      top-10       /* distance from top */
+      left-10      /* distance from left */
+      right-10     /* distance from right */
+      bottom-10    /* distance from bottom */
+      z-0 
+      pointer-events-none 
+      overflow-hidden 
+      transform -translate-y-20
+    "
+  >
+    <div className="hidden md:block h-full w-full">
+      {testimonialBadges.map((badge, index) => (
+        <TestimonialBadge key={index} badge={badge} />
+      ))}
+    </div>
+  </div>
+)}
+
 
       {/* Portfolio Section */}
       <div 
