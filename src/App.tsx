@@ -109,7 +109,7 @@ function App() {
   const eyesRef = useRef<HTMLDivElement>(null);
   const backgroundTextRef = useRef<HTMLDivElement>(null);
   const portfolioSectionRef = useRef<HTMLDivElement>(null);
-  const mainTextRef = useRef<HTMLDivElement>(null);
+  const newMainTextRef = useRef<HTMLDivElement>(null);
   const newScrollIndicatorRef = useRef<HTMLDivElement>(null);
   const fixedBackgroundRef = useRef<HTMLDivElement>(null); 
   const portfolioRef = useRef<HTMLDivElement>(null);
@@ -149,14 +149,15 @@ function App() {
       }
     }); 
 
-    // Main text animation
-    gsap.to(mainTextRef.current, {
-      y: 700,
+    // New main text animation
+    gsap.to(newMainTextRef.current, {
+      y: 300,
+      opacity: 0,
       scrollTrigger: {
         trigger: heroRef.current,
         start: "top top",
-        end: "top+=1000",
-        scrub: 1
+        end: "top+=800",
+        scrub: 2
       }
     });
 
@@ -398,43 +399,27 @@ gsap.to(backgroundTextRef.current, {
           </div>
         </div>
         
-        {/* Main Typography */}
+        {/* New Main Typography - Full Width Light Font */}
         <div 
-          ref={mainTextRef}
-          className="absolute inset-0 flex items-center justify-center z-40" 
-          style={{ top: isMobile() ? '55%' : '20%', left: '-1%' }}
+          ref={newMainTextRef}
+          className="absolute top-0 left-0 right-0 flex items-start justify-center z-40 w-full px-6" 
+          style={{ top: '15%' }}
         >
-          <div className="text-center z-10 px-6">
-            <div 
-              className={`text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white/70 leading-tight ${isMobile() ? 'opacity-100' : 'opacity-0 animate-fade-in-delayed'}`}
+          <div className="w-full text-center">
+            <h1 
+              className="text-3xl md:text-6xl lg:text-8xl text-white/30 leading-none opacity-0 animate-fade-in-delayed"
               style={{ 
+                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontWeight: '200',
+                letterSpacing: '0.3em',
+                wordSpacing: '0.8em',
                 animationDelay: '0.8s', 
                 animationFillMode: 'forwards',
-                textShadow: '0 15px 30px rgba(0,0,0,0.5)'
+                textShadow: '0 10px 20px rgba(0,0,0,0.3)'
               }}
             >
-              I EDIT
-            </div>
-            <div 
-              className={`text-2xl md:text-3xl lg:text-4xl font-bosenAlt tracking-tight text-white/60 leading-tight mt-2 opacity-0 animate-fade-in-delayed`}
-              style={{ 
-                animationDelay: '1.1s', 
-                animationFillMode: 'forwards',
-                textShadow: '0 15px 30px rgba(0,0,0,0.5)'
-              }}
-            >
-              VISUALS THAT
-            </div>
-            <div 
-              className={`text-2xl md:text-4xl lg:text-5xl font-bosenAlt tracking-tight text-white/90 leading-tight mt-2 opacity-0 animate-fade-in-delayed`}
-              style={{ 
-                animationDelay: '1.4s', 
-                animationFillMode: 'forwards',
-                textShadow: '0 15px 30px rgba(0,0,0,0.5)'
-              }}
-            >
-              BUILD BRANDS
-            </div>
+              VISUAL STORYTELLER CRAFTING BRANDS
+            </h1>
           </div>
         </div>
       
