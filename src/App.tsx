@@ -467,8 +467,8 @@ gsap.to(backgroundTextRef.current, {
     className="
       fixed 
       top-10       /* distance from top */
-      left-20      /* distance from left */
-      right-10     /* distance from right */
+      left-10      /* distance from left */
+      right-20     /* distance from right */
       bottom-10    /* distance from bottom */
       z-0 
       pointer-events-none 
