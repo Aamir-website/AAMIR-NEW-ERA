@@ -23,8 +23,8 @@ export function useThrottledMouseTracking(isEnabled: boolean = true) {
           const x = (e.clientX / window.innerWidth - 0.5) * 1.5;
           const y = (e.clientY / window.innerHeight - 0.7) * 0.2;
             // Apply tint/offset to match your eye alignment
-    const tintX = 0.05; // adjust left/right
-    const tintY = -0.02; // adjust up/down
+    const tintX = 3; // adjust left/right
+    const tintY = -0.8; // adjust up/down
 
           setMousePosition({ x, y });
         }
