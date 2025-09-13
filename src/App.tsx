@@ -156,7 +156,7 @@ function App() {
       scrollTrigger: {
         trigger: heroRef.current,
         start: "top top",
-        end: "top+=600",
+        end: "top+=100",
         scrub: 0.5
       }
     });
