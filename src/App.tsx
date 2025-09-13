@@ -468,8 +468,8 @@ gsap.to(backgroundTextRef.current, {
       fixed 
       top-10       /* distance from top */
       left-10      /* distance from left */
-      right-30     /* distance from right */
-      bottom-10    /* distance from bottom */
+      right-20     /* distance from right */
+      bottom-10    /* distance from bottom */ 
       z-0 
       pointer-events-none 
       overflow-hidden 
