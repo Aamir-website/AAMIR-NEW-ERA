@@ -463,7 +463,7 @@ gsap.to(backgroundTextRef.current, {
  
         {/* Floating Testimonial Badges */}
         {showTestimonials && (
-          <<div
+          <div
     className="
       fixed 
       top-10       /* distance from top */
