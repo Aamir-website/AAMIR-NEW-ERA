@@ -476,7 +476,7 @@ gsap.to(backgroundTextRef.current, {
       transform -translate-y-20
     "
   >
-            <div className="hidden md:block h-full w-full">
+            <div className="hidden md:block h-[20%] w-[20%]">
               {testimonialBadges.map((badge, index) => (
                 <TestimonialBadge key={index} badge={badge} />
               ))}
