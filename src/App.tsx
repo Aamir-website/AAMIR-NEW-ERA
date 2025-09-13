@@ -29,7 +29,7 @@ const testimonialBadges: TestimonialBadge[] = [
   
   { image: "/badges/3.png", position: { top: "50%", left: "29%" }, delay: 1.1, shineDelay: 1.7, shineDuration: 15, scale: 0.9 },  
   
-  { image: "/badges/2.png", position: { top: "25%", left: "77%" }, delay: 3.4, shineDelay: 0.1, shineDuration: 13, scale: 0.7 },
+  { image: "/badges/2.png", position: { top: "25%", left: "80%" }, delay: 3.4, shineDelay: 0.1, shineDuration: 13, scale: 0.7 },
   
   { image: "/badges/5.png", position: { top: "25%", left: "10%" }, delay: 2.7, shineDelay: 1.9, shineDuration: 16, scale: 1.1 },
    
