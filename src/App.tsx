@@ -463,7 +463,7 @@ gsap.to(backgroundTextRef.current, {
 
         {/* Floating Testimonial Badges */}
         {showTestimonials && (
-          <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden max-w-9xl mx-auto transform -translate-y-40">
+          <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden max-w-10xl mx-auto transform -translate-y-40">
             <div className="hidden md:block">
               {testimonialBadges.map((badge, index) => (
                 <TestimonialBadge key={index} badge={badge} />
