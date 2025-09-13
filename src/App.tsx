@@ -347,8 +347,8 @@ gsap.to(backgroundTextRef.current, {
         ref={eyesRef}
         className={`fixed inset-0 flex items-center justify-center z-30 transition-opacity duration-100`}
         style={{
-          top: "24%",
-          left: "1%",
+          top: "10%",
+          left: "0%",
           opacity: showeyes ? 1 : 0,
           pointerEvents: showeyes ? "auto" : "none",
           transform: isMobile() ? 'none' : `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
