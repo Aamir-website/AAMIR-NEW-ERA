@@ -110,7 +110,7 @@ function App() {
   const backgroundTextRef = useRef<HTMLDivElement>(null);
   const portfolioSectionRef = useRef<HTMLDivElement>(null);
   const mainTextRef = useRef<HTMLDivElement>(null);
-  const scrollTriangleRef = useRef<HTMLDivElement>(null);
+  const newScrollIndicatorRef = useRef<HTMLDivElement>(null);
   const fixedBackgroundRef = useRef<HTMLDivElement>(null); 
   const portfolioRef = useRef<HTMLDivElement>(null);
 
@@ -160,15 +160,17 @@ function App() {
       }
     });
 
-    // Scroll triangle animation
-    if (scrollTriangleRef.current) {
-      gsap.to(scrollTriangleRef.current, {
-        y: 700,
+    // New scroll indicator animation
+    if (newScrollIndicatorRef.current) {
+      gsap.to(newScrollIndicatorRef.current, {
+        y: -100,
+        opacity: 0,
+        scale: 0.8,
         scrollTrigger: {
           trigger: heroRef.current,
           start: "top top",
-          end: "top+=1000",
-          scrub: 1,
+          end: "top+=500",
+          scrub: 2,
         }
       });
     }
@@ -437,28 +439,39 @@ gsap.to(backgroundTextRef.current, {
         </div>
       
 
-        {/* Scroll Down Triangle */}
+        {/* New Scroll Indicator */}
         <div 
-          ref={scrollTriangleRef}
+          ref={newScrollIndicatorRef}
           className="absolute left-1/2 -translate-x-1/2 opacity-0 animate-fade-in-delayed z-40 cursor-pointer"
           style={{ 
-            top: isMobile() ? '85%' : '75%',
-            animationDelay: '3.5s', 
-            animationFillMode: 'forwards',
-            filter: 'drop-shadow(0 10px 20px rgba(34, 211, 238, 0.3))'
+            bottom: '10%',
+            animationDelay: '2.5s', 
+            animationFillMode: 'forwards'
           }}
           onClick={() => {
-            document.getElementById('contact-section')?.scrollIntoView({ 
+            portfolioSectionRef.current?.scrollIntoView({ 
               behavior: 'smooth' 
             });
           }}
         >
-          <div className="flex flex-col items-center">
-            <div 
-              className="w-0 h-0 border-l-[12px] border-r-[12px] border-t-[20px] border-l-transparent border-r-transparent border-t-cyan-400 animate-bounce-triangle"
-            />
-            <p className="text-white/60 text-xs font-bosenAlt mt-2 uppercase tracking-wide">
-              Scroll Down
+          <div className="flex flex-col items-center group">
+            {/* Animated scroll indicator */}
+            <div className="relative">
+              {/* Outer ring */}
+              <div className="w-16 h-16 rounded-full border-2 border-white/30 flex items-center justify-center group-hover:border-white/50 transition-all duration-300">
+                {/* Inner animated chevron */}
+                <div className="flex flex-col items-center animate-pulse">
+                  <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-white/70 mb-1" />
+                  <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-white/50" />
+                </div>
+              </div>
+              
+              {/* Pulsing background effect */}
+              <div className="absolute inset-0 rounded-full bg-white/5 animate-ping" style={{ animationDuration: '3s' }} />
+            </div>
+            
+            <p className="text-white/50 text-xs font-bosenAlt mt-3 uppercase tracking-widest group-hover:text-white/70 transition-colors duration-300">
+              Explore Work
             </p>
           </div>
         </div>
