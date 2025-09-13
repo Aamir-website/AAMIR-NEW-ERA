@@ -412,7 +412,7 @@ gsap.to(backgroundTextRef.current, {
                 fontFamily: 'IBM Plex Sans, sans-serif',
                 fontWeight: '100',
                 letterSpacing: '0.3em',
-                wordSpacing: '5em',
+                wordSpacing: '4em',
                 animationDelay: '0.8s', 
                 animationFillMode: 'forwards',
                 textShadow: '0 10px 20px rgba(0,0,0,0.3)'
