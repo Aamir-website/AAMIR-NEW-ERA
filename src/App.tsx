@@ -403,7 +403,7 @@ gsap.to(backgroundTextRef.current, {
         <div 
           ref={newMainTextRef}
           className="absolute top-0 left-0 right-0 flex items-start justify-center z-40 w-full px-6" 
-          style={{ top: '5%' }}
+          style={{ top: '0%' }}
         >
           <div className="w-full text-center">
             <h1 
