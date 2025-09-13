@@ -450,12 +450,13 @@ gsap.to(backgroundTextRef.current, {
 
         {/* Bottom Triangle Shape */}
         <div 
-          ref={triangleRef}
-          className={`absolute ${isMobile() ? 'bottom-16' : 'bottom-4'}
-             left-[48%] max-sm:left-[41%]
-             transform -translate-x-1/2   
+  ref={triangleRef}
+  className="absolute left-1/2 -translate-x-1/2 
              opacity-0 animate-fade-in-delayed  
-             z-40 cursor-pointer`}
+             z-40 cursor-pointer"
+  style={{ bottom: isMobile() ? "150px" : "60px" }}
+>
+
           onClick={() => {
             document.getElementById('contact-section')?.scrollIntoView({ 
               behavior: 'smooth' 
