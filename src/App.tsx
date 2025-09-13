@@ -473,7 +473,7 @@ gsap.to(backgroundTextRef.current, {
       z-0 
       pointer-events-none 
       overflow-hidden 
-      transform -translate-y-40
+      transform -translate-y-20
     "
   >
             <div className="hidden md:block">
