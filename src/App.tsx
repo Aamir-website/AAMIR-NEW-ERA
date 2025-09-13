@@ -410,7 +410,7 @@ gsap.to(backgroundTextRef.current, {
               className="text-3xl md:text-6xl lg:text-8xl text-white/30 leading-none opacity-0 animate-fade-in-delayed"
               style={{ 
                 fontFamily: 'IBM Plex Sans, sans-serif',
-                fontWeight: '200',
+                fontWeight: '100',
                 letterSpacing: '0.3em',
                 wordSpacing: '1em',
                 animationDelay: '0.8s', 
