@@ -22,9 +22,7 @@ export function useThrottledMouseTracking(isEnabled: boolean = true) {
         if (isCursorInsideHero) {
           const x = (e.clientX / window.innerWidth - 0.5) * 1.5;
           const y = (e.clientY / window.innerHeight - 0.7) * 0.2;
-           // add downward movement when moving horizontally
-    y += x * 0.4;  // 0.4 is the multiplier (adjust as needed)
-
+        
           setMousePosition({ x, y });
         }
       });
