@@ -18,11 +18,20 @@ export function useThrottledMouseTracking(isEnabled: boolean = true) {
         cancelAnimationFrame(rafRef.current);
       }
 
+      // capture clientX/clientY right away
+      const { clientX, clientY } = e;
+
       rafRef.current = requestAnimationFrame(() => {
         if (isCursorInsideHero) {
-          const x = (e.clientX / window.innerWidth - 0.5) * 1.5;
-          const y = (e.clientY / window.innerHeight - 0.7) * 0.2;
-        
+          const x = (clientX / window.innerWidth - 0.5) * 1.5;
+          const baseY = (clientY / window.innerHeight - 0.7) * 0.2;
+
+          // 👇 Add downward offset when moving horizontally
+          const horizontalDownBias = Math.abs(x) * 0.4; // always pushes down
+          // If you want right=down & left=up, replace with: const horizontalDownBias = x * 0.4;
+
+          const y = baseY + horizontalDownBias;
+
           setMousePosition({ x, y });
         }
       });
@@ -48,6 +57,6 @@ export function useThrottledMouseTracking(isEnabled: boolean = true) {
     mousePosition,
     isCursorInsideHero,
     handleMouseEnter,
-    handleMouseLeave
+    handleMouseLeave,
   };
 }
